@@ -1,0 +1,7 @@
+com\epam\roman\controller\config\SpringWebAppInitializer.class
+com\epam\roman\IndexController.class
+com\epam\roman\dao\impl\UserDAOImpl.class
+com\epam\roman\model\User.class
+com\epam\roman\dao\UserDAO.class
+com\epam\roman\UserController.class
+com\epam\roman\controller\config\ApplicationContextConfig.class

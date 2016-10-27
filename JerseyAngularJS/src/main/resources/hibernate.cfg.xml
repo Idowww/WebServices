@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.username">admin</property>
+		<property name="hibernate.connection.password">adminadmin</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/UserManagement</property>
+		<!-- <property name="hibernate.connection.username">kwpfcwhgwovfrs</property>
+		<property name="hibernate.connection.password">34FKI_EB3x_xaN3HPzy6vNhUsq</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://ec2-54-243-245-58.compute-1.amazonaws.com:5432/dbv59kd8n6481g?sslmode=require</property> -->
+		<mapping class="com.epam.roman.model.User" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,35 @@
+<html ng-app="app">
+<head>
+<title>Users</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script type="text/javascript" src="resources/js/app.js"></script>
+</head>
+
+<body ng-controller="UserCtrl">
+	<h1>Users via RESTEazy & AngularJS</h1>
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>login</th>
+					<th>epam_id</th>
+					<th>is_deleted</th>
+					<th>upsa_id</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users">
+					<td>{{user.login}}</td>
+					<td>{{user.epamId}}</td>
+					<td>{{user.deleted}}</td>
+					<td>{{user.upsaId}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

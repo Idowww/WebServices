@@ -1,0 +1,7 @@
+com\epam\roman\client\package-info.class
+com\epam\roman\client\ObjectFactory.class
+com\epam\roman\client\User.class
+com\epam\roman\client\UserArray.class
+com\epam\roman\client\UserServiceImplService.class
+com\epam\roman\test\UserServiceTest.class
+com\epam\roman\client\UserService.class

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.roman.epam.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UserServiceImplService" targetNamespace="http://ws.roman.epam.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8888/ws/user?xsd=1" namespace="http://ws.roman.epam.com/" />
+    </xsd:schema>
+  </types>
+  <message name="deleteUser">
+    <part name="arg0" type="xsd:int" />
+  </message>
+  <message name="deleteUserResponse" />
+  <message name="getAllUsers" />
+  <message name="getAllUsersResponse">
+    <part name="return" type="tns:userArray" />
+  </message>
+  <message name="addUser">
+    <part name="arg0" type="tns:user" />
+  </message>
+  <message name="addUserResponse" />
+  <message name="getUser">
+    <part name="arg0" type="xsd:int" />
+  </message>
+  <message name="getUserResponse">
+    <part name="return" type="tns:user" />
+  </message>
+  <portType name="UserService">
+    <operation name="deleteUser">
+      <input wsam:Action="http://ws.roman.epam.com/UserService/deleteUserRequest" message="tns:deleteUser" />
+      <output wsam:Action="http://ws.roman.epam.com/UserService/deleteUserResponse" message="tns:deleteUserResponse" />
+    </operation>
+    <operation name="getAllUsers">
+      <input wsam:Action="http://ws.roman.epam.com/UserService/getAllUsersRequest" message="tns:getAllUsers" />
+      <output wsam:Action="http://ws.roman.epam.com/UserService/getAllUsersResponse" message="tns:getAllUsersResponse" />
+    </operation>
+    <operation name="addUser">
+      <input wsam:Action="http://ws.roman.epam.com/UserService/addUserRequest" message="tns:addUser" />
+      <output wsam:Action="http://ws.roman.epam.com/UserService/addUserResponse" message="tns:addUserResponse" />
+    </operation>
+    <operation name="getUser">
+      <input wsam:Action="http://ws.roman.epam.com/UserService/getUserRequest" message="tns:getUser" />
+      <output wsam:Action="http://ws.roman.epam.com/UserService/getUserResponse" message="tns:getUserResponse" />
+    </operation>
+  </portType>
+  <binding name="UserServiceImplPortBinding" type="tns:UserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="deleteUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </output>
+    </operation>
+    <operation name="getAllUsers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </output>
+    </operation>
+    <operation name="addUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </output>
+    </operation>
+    <operation name="getUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.roman.epam.com/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UserServiceImplService">
+    <port name="UserServiceImplPort" binding="tns:UserServiceImplPortBinding">
+      <soap:address location="http://localhost:8888/ws/user" />
+    </port>
+  </service>
+</definitions>

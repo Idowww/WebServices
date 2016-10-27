@@ -1,0 +1,9 @@
+com\epam\roman\util\HibernateUtil.class
+com\epam\roman\ws\UserServiceImpl.class
+com\epam\roman\publisher\SOAPPublisherClient.class
+com\epam\roman\publisher\UserServicePublisher.class
+com\epam\roman\dao\impl\UserDAOImpl.class
+com\epam\roman\model\User.class
+com\epam\roman\ws\UserService.class
+com\epam\roman\dao\UserDAO.class
+com\epam\roman\publisher\TestClass.class
